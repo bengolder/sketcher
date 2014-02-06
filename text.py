@@ -1,7 +1,13 @@
-class TextBlock(object):
+from core import ContextDependent, Drawable
+
+
+class TextBlock(ContextDependent, Drawable):
     """ For drawing text
     """
     def __init__(self, string):
+        # initialize parent constructors
+        for parent in self.__bases__:
+            parent.__init__()
         self.contents = []
         self.contents.append(string)
         self.size = 14
