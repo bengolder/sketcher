@@ -1,11 +1,12 @@
-from sketcher import Card, TextBlock
+from sketcher import Surface, TextBlock
 from sketcher.colors import *
 
-card = Card( White )
+png = Surface( 700, 400 )
+png.fill( White )
 text = TextBlock( "Thanks!" )
 text.size = 24
-card.add( text, "center" )
-card.save( "drawings/basic_card.png" )
+png.add( text, "center" )
+png.save( "drawings/basic_card.png" )
 
 
 
